@@ -1,0 +1,35 @@
+p {
+    color: burlywood; background-color:  rgb(64, 64, 176);
+}
+
+#Rey {
+    color: cornsilk;
+}
+
+#René {
+    color:aqua;
+}
+
+.CH35 {
+    color: blue;
+}
+
+.Párrafo {
+    background-color: black;
+}
+
+.Generation {
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 50px;
+    border: solid seashell;
+}
+
+div {
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 50px;
+    border: solid black;
+}
