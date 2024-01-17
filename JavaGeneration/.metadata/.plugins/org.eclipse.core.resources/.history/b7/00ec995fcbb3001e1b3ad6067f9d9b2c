@@ -1,0 +1,36 @@
+package tiposDeDatosyVariables;
+
+public class DataExercise {
+
+	public static void main(String[] args) {
+
+		System.out.println("Hello, World!");
+		
+		byte age = 15; //Sirve para representar un número entero 8 bits(-128 al 127)
+		System.out.println("La edad del participante es: "+age);
+		
+		short newUsers = 200; //Sirve para representar un número entero 16 bits (-23768 al 32767)
+		System.out.println("Usuarios nuevos: " +newUsers);
+		
+		int totalUsers = 8752; //Sirve para representar un número entero 32 bits (-2147483648 al 2147483647)
+		System.out.println("Usuarios Totales: "+totalUsers);
+		
+		long premiumUsers = 9512; //Sirve para representar un número entero con valores mucho mayores
+		System.out.println("Usuarios premium: "+premiumUsers);
+		
+		
+		//Tipos de datos con números decimales
+		
+		float altura = 1.73f; //Sirve para representar un valor numérico con números decimales, cuyo valor es de 23 bits, puede tener 8 caracteres despues del punto decimal y tiene que llevar una f al final
+		System.out.println("Altura del usuario: "+altura);
+		
+		double peso = 75; //Sirve para representar valores numericos con decimales, cuyo valor es de 64 bits y puede tener hasta quince caracteres despues del punto decimal
+	}
+
+}
+
+/*Comentario
+ * multilinea*/
+
+//Comentario de una sola línea
+
