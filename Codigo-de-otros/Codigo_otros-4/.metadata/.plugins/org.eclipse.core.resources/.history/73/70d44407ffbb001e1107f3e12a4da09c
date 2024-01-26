@@ -1,0 +1,44 @@
+package org.generation.codigoOtros4;
+
+import java.util.Scanner; //Importación para que el usuario introduzca datos
+
+public class CodigoOtros4 {
+	public static void main(String[] args) { //Agregamos clase main para que funcione el programa
+		
+	    Scanner src = new Scanner(System.in);
+	    
+	    System.out.print("Turno del jugador 1 (introduzca piedra, papel o tijeras): ");
+	    String j1 = src.nextLine();
+	    
+	    //Turno del jugador "2"
+	    System.out.print("Turno del jugador 2 (introduzca piedra, papel o tijeras): ");
+	    
+	    String j2 = src.nextLine();
+	    
+	    if (j1 == j2) {
+	      System.out.println("Empate");
+	    } else {
+	      int g = 2;
+	      switch(j1) {
+	        case "piedra":
+	          if (j2 == "tijeras") {
+	            g = 1;
+	          }
+	          break;     //Agregamos un break que era necesario
+	        case "papel":
+	          if (j2 == "piedra") {
+	            g = 1;
+	          }
+	          break;
+	          
+	        case "tijera":
+	          if (j2.equals("papel")) {
+	            g = 1;
+	          }
+	          break;
+	      }
+	      System.out.println("Gana el jugador " + g);
+	    }
+	  
+	}
+}
