@@ -1,0 +1,47 @@
+//Rey David Martínez Olivares
+
+/**
+ * Ejercicio realizado en tiempo post sesión de bootcamp.
+ * La retroalimentación recibida se muestra en el live-coding del primer algoritmo.
+ * 
+ * Retroalimentación:
+ * - Procurar practicar más las estructuras de arreglos y funciones para tener más agilidad al momento de plasmar las ideas en código.
+ * - Comentar todo lo que se va haciendo al momento de codear y para darle al entrevistador una idea clara de la implementación de la lógica de programación y cómo pensamos resolver el algoritmo.
+ * - Buen conocimiento y manejo de fundamentos básicos.
+ * - Tomar un momento para analizar el problema a resolver, antes de comenzar a codear.
+ */
+
+// API
+const API_ENDPOINT = 'https://yesno.wtf/api';
+
+/**
+ * STEPS:
+ *
+ * 1. Create a fetchAnswer function and call the API
+ * 2. Output the API's response
+ * 3. Attach fetchAnswer to an event listener
+ * 4. Clear output after 3 seconds
+ * 5. Optional: add loading/error states
+ *
+ */
+
+
+ // Función para hacer la petición al API y mostrar la respuesta
+ function fetchAnswer() {
+    // Hacer la petición al API
+    fetch('https://yesno.wtf/api')
+      .then(response => response.json())
+      .then(data => {
+        // Mostrar la respuesta en el div con id "answer"
+        document.getElementById('answer').innerText = data.answer;
+
+        // Limpiar la pregunta y la respuesta después de 5 segundos
+        setTimeout(() => {
+          document.getElementById('answer').innerText = '';
+        }, 5000);
+      })
+      .catch(error => console.error('Error:', error));
+  }
+
+  // Agregar un eventListener al botón para llamar a fetchAnswer cuando se hace clic
+  document.getElementById('fetchButton').addEventListener('click', fetchAnswer);
