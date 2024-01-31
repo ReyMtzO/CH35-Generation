@@ -12,4 +12,6 @@
     <fullyQualifiedTypeName name="org.generation.employee.Employee"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="org.generation.employee.Trabajador"/>
+    <fullyQualifiedTypeName name="org.generation.calculadora.Calculadora"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
 </qualifiedTypeNameHistroy>
