@@ -14,4 +14,7 @@
     <fullyQualifiedTypeName name="org.generation.employee.Trabajador"/>
     <fullyQualifiedTypeName name="org.generation.calculadora.Calculadora"/>
     <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,66 @@
+
+CREATE SCHEMA IF NOT EXISTS `QualiteDArt` DEFAULT CHARACTER SET utf8 ;
+USE `QualiteDArt` ;
+
+-- -----------------------------------------------------
+-- Table `QualiteDArt`.`SERVICIOS`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `QualiteDArt`.`SERVICIOS` (
+  `id_servicios` INT NOT NULL AUTO_INCREMENT,
+  `nomServ` VARCHAR(20) NOT NULL,
+  `img` VARCHAR(255) NOT NULL,
+  `descripcion` VARCHAR(200) NOT NULL,
+  `estado` TINYINT(0) NOT NULL,
+  PRIMARY KEY (`id_servicios`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `QualiteDArt`.`ESTADOS`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `QualiteDArt`.`ESTADOS` (
+  `id_estados` INT NOT NULL AUTO_INCREMENT,
+  `estatus` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_estados`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `QualiteDArt`.`AGENDAS`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `QualiteDArt`.`AGENDAS` (
+  `id_agendas` INT NOT NULL AUTO_INCREMENT,
+  `nombreCliente` VARCHAR(80) NOT NULL,
+  `telefono` INT(15) NOT NULL,
+  `direccionEvento` VARCHAR(200) NOT NULL,
+  `fechaEvento` DATE NOT NULL,
+  `horarioEventoInicial` TIME NOT NULL,
+  `horarioEventoFinal` TIME NOT NULL,
+  `comentarioServicio` LONGTEXT NOT NULL,
+  `SERVICIOS_id_SERVICIOS` INT NOT NULL,
+  `ESTADOS_id_ESTADOS` INT NOT NULL,
+  PRIMARY KEY (`id_agendas`),
+  INDEX `fk_AGENDAS_SERVICIOS_idx` (`SERVICIOS_id_SERVICIOS` ASC) VISIBLE,
+  INDEX `fk_AGENDAS_ESTADOS1_idx` (`ESTADOS_id_ESTADOS` ASC) VISIBLE,
+  CONSTRAINT `fk_AGENDAS_SERVICIOS`
+    FOREIGN KEY (`SERVICIOS_id_SERVICIOS`)
+    REFERENCES `QualiteDArt`.`SERVICIOS` (`id_servicios`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_AGENDAS_ESTADOS1`
+    FOREIGN KEY (`ESTADOS_id_ESTADOS`)
+    REFERENCES `QualiteDArt`.`ESTADOS` (`id_estados`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `QualiteDArt`.`PORTAFOLIOS`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `QualiteDArt`.`PORTAFOLIOS` (
+  `id_portafolios` INT NOT NULL AUTO_INCREMENT,
+  `nomImg` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id_portafolios`))
+ENGINE = InnoDB;
+
