@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="double costoPasaje = 380.50;"/>
+		<item key="selection" value="public Optional&lt;Agenda&gt; map(Object object) {"/>
 		<list key="findhistory">
+			<item value="public Optional&lt;Agenda&gt; map(Object object) {"/>
 			<item value="double costoPasaje = 380.50;"/>
 		</list>
 	</section>
