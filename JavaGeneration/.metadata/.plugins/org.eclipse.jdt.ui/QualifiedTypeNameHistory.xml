@@ -51,4 +51,13 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
+    <fullyQualifiedTypeName name="com.qdart.exceptions.ClienteNotFoundException"/>
+    <fullyQualifiedTypeName name="com.qdart.service.ClienteService"/>
+    <fullyQualifiedTypeName name="com.qdart.repository.ClienteRepository"/>
+    <fullyQualifiedTypeName name="com.qdart.model.Cliente"/>
+    <fullyQualifiedTypeName name="com.qdart.cliente.service.ClienteService"/>
+    <fullyQualifiedTypeName name="com.qdart.cliente.repository.ClienteRepository"/>
+    <fullyQualifiedTypeName name="com.qdart.cliente.exception.ClienteNotFoundException"/>
+    <fullyQualifiedTypeName name="com.qdart.cliente.model.Cliente"/>
+    <fullyQualifiedTypeName name="org.springframework.dao.DataAccessException"/>
 </qualifiedTypeNameHistroy>
