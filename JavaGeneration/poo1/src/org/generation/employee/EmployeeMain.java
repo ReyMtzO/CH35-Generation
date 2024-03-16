@@ -21,7 +21,7 @@ public class EmployeeMain {
 		//Usando getter
 		System.out.println(Daniel.getNombre() + " " + Daniel.getApellido() + " ocupa el puesto de " + Daniel.getPuesto());
 		//Accediendo a la propiedad del objeto
-		System.out.println(Abigail.puesto + " gana $" + Abigail.salario + " peosos");
+		System.out.println(Abigail.puesto + " gana $" + Abigail.salario + " pesos");
 		
 		//Actualizando información mediante Setter
 		Arturo.setSalario(24598.11);
